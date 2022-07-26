@@ -21,6 +21,7 @@ public class FirstTestClass {
         System.out.println(driver.getTitle());
         Thread.sleep(5000);
         driver.quit();
+        System.out.println("test Google Executed");
 		
 	}
 	@Test
@@ -34,6 +35,7 @@ public class FirstTestClass {
         System.out.println(driver.getTitle());
         Thread.sleep(5000);
         driver.quit();
+        System.out.println("testFacebook Executed");
 	}
 	
 }
