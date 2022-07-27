@@ -51,7 +51,7 @@
               <ul>
                 <li>
                   <a href="#" panel-name="test-xml-Suite" class="navigator-link ">
-                    <span>C:\Users\RAJOB001\eclipse-selenium-workspace\TestNGMaven\src\test\resources\AnnotationsTestNG.xml</span>
+                    <span>C:\Users\RAJOB001\eclipse-selenium-workspace\TestNGMaven\src\test\resources\ParamAnotTestNG.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
@@ -93,7 +93,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">1 method,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -104,12 +104,7 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.rb.second.MyAnnotations" class="method navigator-link" hash-for-method="testMethod">testMethod</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="com.rb.second.MyAnnotations" class="method navigator-link" hash-for-method="testMethod1">testMethod1</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="com.rb.second.ParamAnotationLoginEx" class="method navigator-link" hash-for-method="testLogin(student, Password123)">testLogin(student, Password123)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -127,21 +122,15 @@
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">com.rb.second.MyAnnotations</span>
+              <span class="class-name">com.rb.second.ParamAnotationLoginEx</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testMethod">
-                  </a> <!-- testMethod -->
-                  <span class="method-name">testMethod</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="testMethod1">
-                  </a> <!-- testMethod1 -->
-                  <span class="method-name">testMethod1</span>
+                  <a name="testLogin(student, Password123)">
+                  </a> <!-- testLogin(student, Password123) -->
+                  <span class="method-name">testLogin</span>
+                  <span class="parameters">(student, Password123)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -149,23 +138,26 @@
         </div> <!-- panel Suite -->
         <div panel-name="test-xml-Suite" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\RAJOB001\eclipse-selenium-workspace\TestNGMaven\src\test\resources\AnnotationsTestNG.xml</span>
+            <span class="header-content">C:\Users\RAJOB001\eclipse-selenium-workspace\TestNGMaven\src\test\resources\ParamAnotTestNG.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
+  &lt;parameter name=&quot;global&quot; value=&quot;available in entire suite&quot;/&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;TestName1&quot;&gt;
+    &lt;parameter name=&quot;password&quot; value=&quot;Password123&quot;/&gt;
+    &lt;parameter name=&quot;name&quot; value=&quot;student&quot;/&gt;
+    &lt;parameter name=&quot;url&quot; value=&quot;https://practicetestautomation.com/practice-test-login/&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;com.rb.second.MyAnnotations&quot;&gt;
+      &lt;class name=&quot;com.rb.second.ParamAnotationLoginEx&quot;&gt;
         &lt;methods&gt;
-          &lt;include name=&quot;testMethod&quot;/&gt;
-          &lt;include name=&quot;testMethod1&quot;/&gt;
+          &lt;include name=&quot;testLogin&quot;/&gt;
         &lt;/methods&gt;
-      &lt;/class&gt; &lt;!-- com.rb.second.MyAnnotations --&gt;
+      &lt;/class&gt; &lt;!-- com.rb.second.ParamAnotationLoginEx --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Test --&gt;
+  &lt;/test&gt; &lt;!-- TestName1 --&gt;
 &lt;/suite&gt; &lt;!-- Suite --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -177,7 +169,7 @@
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Test (1 class)</span>
+                <span class="test-name">TestName1 (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
@@ -203,20 +195,16 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(1);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testMethod1')
-data.setCell(0, 2, 'com.rb.second.MyAnnotations')
-data.setCell(0, 3, 0);
-data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testMethod')
-data.setCell(1, 2, 'com.rb.second.MyAnnotations')
-data.setCell(1, 3, 0);
+data.setCell(0, 1, 'testLogin')
+data.setCell(0, 2, 'com.rb.second.ParamAnotationLoginEx')
+data.setCell(0, 3, 4268);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 0 ms</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -242,55 +230,19 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">com.rb.second.MyAnnotations</div> <!-- chronological-class-name -->
-              <div class="configuration-suite before">
-                <span class="method-name">beforeSuite</span>
+              <div class="chronological-class-name">com.rb.second.ParamAnotationLoginEx</div> <!-- chronological-class-name -->
+              <div class="configuration-method before">
+                <span class="method-name">initializeChrome(https://practicetestautomation.com/practice-test-login/)</span>
                 <span class="method-start">0 ms</span>
-              </div> <!-- configuration-suite before -->
-              <div class="configuration-test before">
-                <span class="method-name">beforeTest</span>
-                <span class="method-start">27 ms</span>
-              </div> <!-- configuration-test before -->
-              <div class="configuration-class before">
-                <span class="method-name">beforeClass</span>
-                <span class="method-start">54 ms</span>
-              </div> <!-- configuration-class before -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">69 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testMethod</span>
-                <span class="method-start">69 ms</span>
+                <span class="method-name">testLogin(student, Password123)</span>
+                <span class="method-start">6650 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">afterMethod</span>
-                <span class="method-start">85 ms</span>
+                <span class="method-start">10925 ms</span>
               </div> <!-- configuration-method after -->
-              <div class="configuration-method after">
-                <span class="method-name">afterMethod</span>
-                <span class="method-start">85 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">beforeMethod</span>
-                <span class="method-start">85 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
-                <span class="method-name">testMethod1</span>
-                <span class="method-start">85 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-test after">
-                <span class="method-name">afterTest</span>
-                <span class="method-start">100 ms</span>
-              </div> <!-- configuration-test after -->
-              <div class="configuration-class after">
-                <span class="method-name">afterClass</span>
-                <span class="method-start">100 ms</span>
-              </div> <!-- configuration-class after -->
-              <div class="configuration-suite after">
-                <span class="method-name">afterSuite</span>
-                <span class="method-start">248 ms</span>
-              </div> <!-- configuration-suite after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<parameter name="global" value="available in entire suite"></parameter>
+	<test thread-count="5" name="TestName1">
+		<parameter name="url"
+			value="https://practicetestautomation.com/practice-test-login/" />
+		<parameter name="name" value="student"></parameter>
+		<parameter name="password" value="Password123"></parameter>
+		<classes>
+			<class name="com.rb.second.ParamAnotationLoginEx">
+				<methods>
+					<include name="testLogin"></include>
+				</methods>
+			</class>
+		</classes>
+	</test>
+</suite> 
