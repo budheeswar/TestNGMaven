@@ -6,6 +6,7 @@
 			<class name="com.rb.second.MyAnnotations">
 				<methods>
 					<include name="testMethod"></include>
+					<include name="testMethod1"></include>
 				</methods>
 			</class>
 		</classes>

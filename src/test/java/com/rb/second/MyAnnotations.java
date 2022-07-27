@@ -15,6 +15,11 @@ public class MyAnnotations {
   public void testMethod() {
 	  System.out.println("Test Method");
   }
+  
+  @Test
+  public void testMethod1() {
+	  System.out.println("Second Test Method ");
+  }
   @BeforeMethod
   public void beforeMethod() {
 	  System.out.println("beforeMethod");
