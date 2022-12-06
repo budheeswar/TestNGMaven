@@ -10,9 +10,7 @@
 				</methods>
 			</class>
 			<class name="com.rb.first.SecondTestClass">
-				<methods>
-					<include name="testLogin"></include>
-				</methods>
+				
 			</class>
 		</classes>
 	</test>
